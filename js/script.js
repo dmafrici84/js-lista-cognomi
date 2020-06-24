@@ -12,6 +12,12 @@ btn.addEventListener("click", function () {
 
   var lista = document.getElementById('lista');
 
+  var avviso = document.getElementById("avviso");
+
+  // "pulisco" la lista cognomi e l'avviso dell'errore nell html
+
+  lista.innerHTML = "";
+
   // prendo il valore inserito dall'cognomeUtente
 
   var cognomeUtente = document.getElementById('cognome').value;
@@ -19,7 +25,7 @@ btn.addEventListener("click", function () {
   var j = "a";
 
   // pongo delle condizioni affinchè il dato inserito dall'utente non sia corretto
-  
+
   if (j > cognomeUtente && isNaN(cognomeUtente) && cognomeUtente != "") {
 
     // aggiungo nell'array creato in precedenza il cognome dell'utente
@@ -56,7 +62,7 @@ btn.addEventListener("click", function () {
 
     // se i dati inseriti dall'utente non sono corretti
 
-    document.getElementById("avviso").innerHTML = "Attenzione il Cognome inserito non è corretto. Verificare anche che la prima lettera sia maiuscola.";
+    avviso.innerHTML = "Attenzione il Cognome inserito non è corretto. Verificare anche che la prima lettera sia maiuscola.";
 
   }
 
