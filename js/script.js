@@ -14,7 +14,7 @@ btn.addEventListener("click", function () {
 
   var avviso = document.getElementById("avviso");
 
-  // "pulisco" la lista cognomi e l'avviso dell'errore nell html
+  // "pulisco" la lista cognomi nell html
 
   lista.innerHTML = "";
 
@@ -24,7 +24,7 @@ btn.addEventListener("click", function () {
 
   var j = "a";
 
-  // pongo delle condizioni affinchè il dato inserito dall'utente non sia corretto
+  // pongo delle condizioni affinchè il dato inserito dall'utente sia corretto
 
   if (j > cognomeUtente && isNaN(cognomeUtente) && cognomeUtente != "") {
 
@@ -52,7 +52,7 @@ btn.addEventListener("click", function () {
 
       if (cognomeUtente == listaCognomi[i]) {
 
-        document.getElementById("avviso").innerHTML = "Il cognome inserito si trova nella posizione: " + (i+1);
+        avviso.innerHTML = "Il cognome inserito si trova nella posizione: " + (i +1 );
 
       }
 
