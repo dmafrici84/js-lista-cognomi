@@ -1,6 +1,6 @@
 // creo l'array con i cognomi
 
-var listaCognomi = ["Rossi", "Magenta", "Verdi", "Rosa", "Bianchi", "Marroni"];
+var listaCognomi = ["ROSSI", "MAGENTA", "VERDI", "ROSA", "BIANCHI", "MARRONI"];
 
 console.log(listaCognomi);
 
@@ -22,11 +22,15 @@ btn.addEventListener("click", function () {
 
   var cognomeUtente = document.getElementById('cognome').value;
 
-  var j = "a";
+  // trasformo tutte le lettere del cognomeUtente in lettere maiuscole
+
+  cognomeUtente = cognomeUtente.toLocaleUpperCase();
+
+  console.log(cognomeUtente);
 
   // pongo delle condizioni affinchè il dato inserito dall'utente sia corretto
 
-  if (j > cognomeUtente && isNaN(cognomeUtente) && cognomeUtente != "") {
+  if (isNaN(cognomeUtente) && cognomeUtente != "") {
 
     // aggiungo nell'array creato in precedenza il cognome dell'utente
 
@@ -62,7 +66,7 @@ btn.addEventListener("click", function () {
 
     // se i dati inseriti dall'utente non sono corretti
 
-    avviso.innerHTML = "Attenzione il Cognome inserito non è corretto. Verificare anche che la prima lettera sia maiuscola.";
+    avviso.innerHTML = "Attenzione il Cognome inserito non è corretto.";
 
   }
 
